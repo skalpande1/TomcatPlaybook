@@ -6,3 +6,4 @@ tomcat_download_url: https://downloads.apache.org/tomcat/tomcat-9/v9.0.52/bin/ap
 tomcat_download_dest: /tmp/apache-tomcat-9.0.52.tar.gz
 tomcat_home_dir: /opt/tomcat
 tomcat_shell: /bin/false
+ansible_python_interepeter: /usr/bin/python3
