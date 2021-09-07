@@ -1,6 +1,6 @@
 ---
-- name: installing Tomcat9
-  host: all
+- name: Installing tomcat 9
+  hosts: all
   become: yes
   tasks:
     - name: installing open jdk 11
