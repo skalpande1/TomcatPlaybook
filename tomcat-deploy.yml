@@ -45,10 +45,10 @@
         path: "{{ tomcat_check_dir }}"
         mode: u=rwx,g=rx
         state: directory
-    - name: update  recursive ownership for tomcat
+    - name: update recursive ownership for tomcat
       file:
         path: "{{ item }}"
-        resurce: true
+        recurse: true
         group: "{{ tomcat_group }}"
         owner: "{{ tomcat_group }}"
         state: directory
