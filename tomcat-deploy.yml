@@ -55,7 +55,7 @@
       loop: "{{ tomcat_directories_for_group_permissions }}"
     - name: copy tomcat service module
       copy:
-        src: tomcat.srvice
+        src: tomcat.service
         dest: "{{ tomcat_service_file }}"
       notify:
         - daemon reload
