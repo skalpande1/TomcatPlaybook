@@ -16,16 +16,16 @@
       file: 
         path: "{{ tomcat_home_dir }}"
         state: directory
-    - name: ensure tomcat user is exist
+    - name: Ensure the user tomcat exists
       user:
         name: "{{ tomcat_user }}" 
         group: "{{ tomcat_group }}"
         home: "{{ tomcat_home_dir }}"
         shell: "{{ tomcat_shell }}"
-    - name: download tomcat9 
-      url:
-        src: "{{ tomcat_download_url }}"
-        dest: "{{ tomcat_download_dest}}"
+    - name: download tomcat
+      get_url:
+        url: "{{ tomcat_download_url }}"
+        dest: "{{ tomcat_download_dest }}"
     - name: unextract tomcat
       unarchive:
         src: "{{ tomcat_download_dest}}"
